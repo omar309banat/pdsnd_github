@@ -45,4 +45,7 @@ All four of these files are zipped up in the "all_project_files" document in the
 
 If you'd prefer, the later Project Workspace page in the classroom also has the `bikeshare.py` file and all the city dataset files included in it, and you can do all your work on the project with them there. If you choose this option, you don't need to download the files from the Resources tab.
 
-
+## Cities Covered
+- Chicago
+- New York City
+- Washington
