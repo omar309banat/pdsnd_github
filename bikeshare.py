@@ -112,8 +112,8 @@ def time_stats(df):
     print(f"Most popular day of week: {popular_day}\n")
 
     # Most popular hour of day
-    pop_hour = df['hour'].mode()[0]
-    print(f"Most popular hour of day: {pop_hour}\n")
+    popular_hour = df['hour'].mode()[0]
+    print(f"Most popular hour of day: {popular_hour}\n")
 
     print(f"This took {(time.time() - start_time)} seconds.")
     print('-'*40)
