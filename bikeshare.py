@@ -104,16 +104,16 @@ def time_stats(df):
     start_time = time.time()
 
     # Most popular month
-    pop_month = df['month'].mode()[0]
-    print(f"Most popular month: {pop_month}\n")
+    popular_month = df['month'].mode()[0]
+    print(f"Most popular month: {popular_month}\n")
 
     # Most popular day of week
-    pop_day = df['day_of_week'].mode()[0]
-    print(f"Most popular day of week: {pop_day}\n")
+    popular_day = df['day_of_week'].mode()[0]
+    print(f"Most popular day of week: {popular_day}\n")
 
     # Most popular hour of day
-    pop_hour = df['hour'].mode()[0]
-    print(f"Most popular hour of day: {pop_hour}\n")
+    popular_hour = df['hour'].mode()[0]
+    print(f"Most popular hour of day: {popular_hour}\n")
 
     print(f"This took {(time.time() - start_time)} seconds.")
     print('-'*40)
