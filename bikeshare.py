@@ -104,16 +104,16 @@ def time_stats(df):
     start_time = time.time()
 
     # Most popular month
-    popular_month = df['month'].mode()[0]
-    print(f"Most popular month: {popular_month}\n")
+    pop_month = df['month'].mode()[0]
+    print(f"Most popular month: {pop_month}\n")
 
     # Most popular day of week
-    popular_day = df['day_of_week'].mode()[0]
-    print(f"Most popular day of week: {popular_day}\n")
+    pop_day = df['day_of_week'].mode()[0]
+    print(f"Most popular day of week: {pop_day}\n")
 
     # Most popular hour of day
-    popular_hour = df['hour'].mode()[0]
-    print(f"Most popular hour of day: {popular_hour}\n")
+    pop_hour = df['hour'].mode()[0]
+    print(f"Most popular hour of day: {pop_hour}\n")
 
     print(f"This took {(time.time() - start_time)} seconds.")
     print('-'*40)
@@ -189,31 +189,19 @@ def user_stats(df):
     else:
         print("No 'Gender' data available.\n")
 
-
     # Birth year statistics
-    if 'Birth Year' in df.columns:  # Check if the 'Birth Year' column exists in the DataFrame
-        # Calculate the earliest birth year by finding the minimum value in the 'Birth Year' column
+    if 'Birth Year' in df.columns:
         earliest_birth_year = int(df['Birth Year'].min())
-        
-        # Calculate the latest birth year by finding the maximum value in the 'Birth Year' column
         latest_birth_year = int(df['Birth Year'].max())
-        
-        # Calculate the most common birth year by finding the mode of the 'Birth Year' column
         most_common_birth_year = int(df['Birth Year'].mode()[0])
-        
-        # Print the results for the earliest, latest, and most common birth years
         print(f"Earliest birth year: {earliest_birth_year}\n")
         print(f"Most recent birth year: {latest_birth_year}\n")
         print(f"Most common birth year: {most_common_birth_year}\n")
     else:
-        # If the 'Birth Year' column does not exist, print a message indicating that no data is available
         print("No birth year data available.\n")
 
-    # Print the time taken to execute this block of code
     print(f"This took {(time.time() - start_time)} seconds.")
-    print('-'*40)  # Print a separator line for better readability in the output
-
-
+    print('-'*40)
 
 
 def display_data(df):
